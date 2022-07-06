@@ -29,11 +29,12 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-branco);
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1rem;
   padding: 2rem 1.5rem;
 }
 
 .attribution {
+  padding: 1rem;
   font-size: 11px;
   text-align: center;
 }
