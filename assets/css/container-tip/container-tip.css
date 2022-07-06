@@ -56,8 +56,4 @@
     width: calc(100% - 2rem);
     grid-template-columns: repeat(3, 33.33%);
   }
-
-  .containerTip {
-    width: calc(100% - 3rem);
-  }
 }
