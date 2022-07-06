@@ -1,0 +1,43 @@
+:root {
+  --bg-ciano: hsl(185, 41%, 84%);
+  --ciano-preto-escuro: hsl(183, 100%, 15%);
+  --ciano-escuro: hsl(186, 14%, 43%);
+  --ciano-cinza: hsl(184, 14%, 56%);
+  --ciano-cinza-claro: hsl(172, 67%, 45%);
+  --ciano-muito-claro: hsl(189, 41%, 97%);
+  --bg-branco: hsl(0, 0%, 100%);
+
+  --font-family: "Space Mono", monospace;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-ciano);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerHeader--titulo {
+  padding: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-branco);
+  border-radius: 1rem 1rem 0 0;
+  padding: 2rem 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="assets/css/base/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base/base.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/container-bill/container-bill.css"
+    />
+    <link rel="stylesheet" href="assets/css/container-tip/container-tip.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/container-amount/container-amount.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        class="containerHeader--titulo"
+        src="assets/images/logo.svg"
+        alt="Logo Splitter"
+      />
+    </header>
+    <div class="container">
+      <section class="containerBill">
+        <div class="containerBill-bill">
+          <label class="containerBill-bill__label" for="bill">Bill</label>
+          <input
+            class="containerBill-bill__input"
+            type="text"
+            id="bill"
+            placeholder="0"
+          />
+        </div>
+
+        <div class="containerTip">
+          <span class="containerBill-bill__label titulo-tip">Select Tip %</span>
+          <div class="containerTip--btns">
+            <button class="containerTip--btns-btn">5%</button>
+            <button class="containerTip--btns-btn">10%</button>
+            <button class="containerTip--btns-btn">15%</button>
+            <button class="containerTip--btns-btn">25%</button>
+            <button class="containerTip--btns-btn">50%</button>
+            <input
+              class="containerTip--btns-btn btn-custom"
+              type="number"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="containerBill-bill__label">Number of People</label>
+          <input class="containerBill-bill__input input-person" type="number" />
+        </div>
+      </section>
+
+      <section class="containerAmount">
+        <div class="containerAmount--container">
+          <div class="containerAmount--container--div">
+            <div class="containerAmount--container--div-flex">
+              <span class="containerAmount--container--div__span-tip"
+                >Tip Amount</span
+              >
+              <span class="person">/ person</span>
+            </div>
+            <div>
+              <span class="total">$0.00</span>
+            </div>
+          </div>
+          <div class="containerAmount--container--div">
+            <div class="containerAmount--container--div-flex">
+              <span class="containerAmount--container--div__span-tip"
+                >Total</span
+              >
+              <span class="person">/ person</span>
+            </div>
+            <div>
+              <span class="total">$0.00</span>
+            </div>
+          </div>
+          <div class="containerAmount--container--div">
+            <button class="btn-reset">Reset</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
