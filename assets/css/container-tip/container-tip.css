@@ -36,6 +36,8 @@
 
 .btn-custom {
   background-color: var(--ciano-muito-claro);
+  text-align: right;
+  padding: 0 1.875rem;
 }
 
 .btn-custom:hover,
@@ -54,5 +56,13 @@
   .containerTip--btns {
     width: calc(100% - 2rem);
     grid-template-columns: repeat(3, 33.33%);
+  }
+
+  .btn-custom {
+    padding: 0;
+  }
+
+  .btn-custom {
+    color: var(--ciano-preto-escuro);
   }
 }
