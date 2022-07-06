@@ -50,3 +50,14 @@
   background-image: url("/assets/images/icon-person.svg");
   margin-top: 0.5rem;
 }
+
+@media screen and (min-width: 768px) {
+  .containerTip--btns {
+    width: calc(100% - 2rem);
+    grid-template-columns: repeat(3, 33.33%);
+  }
+
+  .containerTip {
+    width: calc(100% - 3rem);
+  }
+}

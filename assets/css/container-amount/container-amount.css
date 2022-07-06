@@ -10,7 +10,6 @@
 .containerAmount--container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 100%;
 }
 
@@ -53,4 +52,21 @@
   font-family: var(--font-family);
   font-size: 1.5rem;
   border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .containerAmount {
+    width: calc(100% - 3rem);
+    margin-top: 0;
+    padding-top: 3.125rem;
+  }
+
+  .containerAmount--container {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-reset {
+    margin-bottom: 20px;
+  }
 }

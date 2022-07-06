@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-branco);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding: 2rem 1.5rem;
 }
 
@@ -41,4 +41,13 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 3rem;
+    padding: 1.5rem;
+  }
 }
