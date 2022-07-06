@@ -38,6 +38,7 @@
   background-color: var(--ciano-muito-claro);
   text-align: right;
   padding: 0 1.875rem;
+  color: var(--ciano-preto-escuro);
 }
 
 .btn-custom:hover,
