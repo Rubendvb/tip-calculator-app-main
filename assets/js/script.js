@@ -9,7 +9,7 @@ let zeroBill = document.querySelector(".zeroBill");
 let zeroPeople = document.querySelector(".zeroPeople");
 
 function formatarValor(valor) {
-  console.log(valor);
+  console.log(typeof valor);
 
   valor = valor.replace(/[,.]/g, "");
 
