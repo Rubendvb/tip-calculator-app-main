@@ -69,10 +69,6 @@
   color: rgb(230, 96, 96);
 }
 
-.active {
-  display: block;
-}
-
 @media screen and (min-width: 768px) {
   .containerBill {
     padding: 1.2rem 0 1rem 1.5rem;

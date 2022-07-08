@@ -27,9 +27,16 @@
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .containerTip--btns-btn:hover {
+  background-color: hsl(172, 77%, 75%);
+  color: var(--ciano-preto-escuro);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.containerTip--btns-btn:focus {
   background-color: var(--ciano-cinza-claro);
   color: var(--ciano-preto-escuro);
 }

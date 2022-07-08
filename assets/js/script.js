@@ -93,7 +93,12 @@ function startingFunctions() {
       });
     }
     btn.addEventListener("click", () => {
-      inputCustom.value = "";
+      // inputCustom.value = "";
+
+      if (btn != inputCustom) {
+        inputCustom.value = "";
+      }
+
       validaInputZerado();
       calcTip(btn.value);
 
@@ -112,6 +117,7 @@ function startingFunctions() {
     inputPeople.value = "";
     tipAmount.innerHTML = "$0.00";
     totalAmount.innerHTML = "$0.00";
+    inputCustom.value = "";
   });
 }
 

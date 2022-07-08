@@ -55,6 +55,13 @@
   font-family: var(--font-family);
   font-size: 1.5rem;
   border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-reset:enabled:hover {
+  background-color: hsl(172, 77%, 75%);
+  color: var(--ciano-preto-escuro);
+  transition: background-color 0.2s ease-in-out;
 }
 
 .btn-reset[disabled] {
