@@ -40,98 +40,102 @@
         alt="Logo Splitter"
       />
     </header>
-    <div class="container">
-      <section class="containerBill">
-        <div class="containerBill-bill">
-          <div class="containerBill__zero">
-            <label class="containerBill-bill__label" for="bill">Bill</label>
-            <span class="zeroBill">Can't be zero</span>
+    <main>
+      <div class="container">
+        <section class="containerBill">
+          <div class="containerBill-bill">
+            <div class="containerBill__zero">
+              <label class="containerBill-bill__label" for="bill">Bill</label>
+              <span class="zeroBill">Can't be zero</span>
+            </div>
+            <div>
+              <input
+                class="containerBill-bill__input"
+                type="number"
+                id="bill"
+                placeholder="0"
+              />
+            </div>
           </div>
-          <div>
-            <input
-              class="containerBill-bill__input"
-              type="number"
-              id="bill"
-              placeholder="0"
-            />
-          </div>
-        </div>
 
-        <div class="containerTip">
-          <span class="containerBill-bill__label titulo-tip">Select Tip %</span>
-          <div class="containerTip--btns">
-            <button tabindex="1" class="containerTip--btns-btn" value="5">
-              5%
-            </button>
-            <button tabindex="1" class="containerTip--btns-btn" value="10">
-              10%
-            </button>
-            <button tabindex="1" class="containerTip--btns-btn" value="15">
-              15%
-            </button>
-            <button tabindex="1" class="containerTip--btns-btn" value="25">
-              25%
-            </button>
-            <button tabindex="1" class="containerTip--btns-btn" value="50">
-              50%
-            </button>
-            <input
-              class="containerTip--btns-btn btn-custom"
-              type="number"
-              placeholder="Custom"
-            />
-          </div>
-        </div>
-        <div>
-          <div class="containerPeople">
-            <label for="people" class="containerBill-bill__label"
-              >Number of People</label
+          <div class="containerTip">
+            <span class="containerBill-bill__label titulo-tip"
+              >Select Tip %</span
             >
-            <span class="zeroPeople">Can't be zero</span>
+            <div class="containerTip--btns">
+              <button tabindex="1" class="containerTip--btns-btn" value="5">
+                5%
+              </button>
+              <button tabindex="1" class="containerTip--btns-btn" value="10">
+                10%
+              </button>
+              <button tabindex="1" class="containerTip--btns-btn" value="15">
+                15%
+              </button>
+              <button tabindex="1" class="containerTip--btns-btn" value="25">
+                25%
+              </button>
+              <button tabindex="1" class="containerTip--btns-btn" value="50">
+                50%
+              </button>
+              <input
+                class="containerTip--btns-btn btn-custom"
+                type="number"
+                placeholder="Custom"
+              />
+            </div>
           </div>
           <div>
-            <input
-              class="containerBill-bill__input input-person"
-              type="number"
-              placeholder="0"
-              id="people"
-            />
+            <div class="containerPeople">
+              <label for="people" class="containerBill-bill__label"
+                >Number of People</label
+              >
+              <span class="zeroPeople">Can't be zero</span>
+            </div>
+            <div>
+              <input
+                class="containerBill-bill__input input-person"
+                type="number"
+                placeholder="0"
+                id="people"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="containerAmount">
-        <div class="containerAmount--container">
-          <div>
-            <div class="containerAmount--container--div">
-              <div class="containerAmount--container--div-flex">
-                <span class="containerAmount--container--div__span-tip"
-                  >Tip Amount</span
-                >
-                <span class="person">/ person</span>
+        <section class="containerAmount">
+          <div class="containerAmount--container">
+            <div>
+              <div class="containerAmount--container--div">
+                <div class="containerAmount--container--div-flex">
+                  <span class="containerAmount--container--div__span-tip"
+                    >Tip Amount</span
+                  >
+                  <span class="person">/ person</span>
+                </div>
+                <div>
+                  <span id="tipPerson" class="total">$0.00</span>
+                </div>
               </div>
-              <div>
-                <span id="tipPerson" class="total">$0.00</span>
+              <div class="containerAmount--container--div">
+                <div class="containerAmount--container--div-flex">
+                  <span class="containerAmount--container--div__span-tip"
+                    >Total</span
+                  >
+                  <span class="person">/ person</span>
+                </div>
+                <div>
+                  <span id="totalPerson" class="total">$0.00</span>
+                </div>
               </div>
             </div>
             <div class="containerAmount--container--div">
-              <div class="containerAmount--container--div-flex">
-                <span class="containerAmount--container--div__span-tip"
-                  >Total</span
-                >
-                <span class="person">/ person</span>
-              </div>
-              <div>
-                <span id="totalPerson" class="total">$0.00</span>
-              </div>
+              <button class="btn-reset" type="button" disabled>Reset</button>
             </div>
           </div>
-          <div class="containerAmount--container--div">
-            <button class="btn-reset" type="button" disabled>Reset</button>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </main>
 
     <footer class="attribution">
       Challenge by
