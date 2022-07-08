@@ -38,8 +38,11 @@
 }
 
 .total {
+  min-width: 160px;
   color: var(--ciano-cinza-claro);
   font-size: 2.3rem;
+  display: block;
+  text-align: right;
 }
 
 .btn-reset {
@@ -52,6 +55,12 @@
   font-family: var(--font-family);
   font-size: 1.5rem;
   border-radius: 6px;
+}
+
+.btn-reset[disabled] {
+  /* background-color: var(--ciano-cinza-claro); */
+  color: var(--ciano-preto-escuro);
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 768px) {

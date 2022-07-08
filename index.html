@@ -43,23 +43,29 @@
     <div class="container">
       <section class="containerBill">
         <div class="containerBill-bill">
-          <label class="containerBill-bill__label" for="bill">Bill</label>
-          <input
-            class="containerBill-bill__input"
-            type="number"
-            id="bill"
-            placeholder="0"
-          />
+          <div class="containerBill__zero">
+            <label class="containerBill-bill__label" for="bill">Bill</label>
+            <span class="zeroBill">Can't be zero</span>
+          </div>
+          <div>
+            <input
+              class="containerBill-bill__input"
+              type="number"
+              id="bill"
+              placeholder="0"
+              required
+            />
+          </div>
         </div>
 
         <div class="containerTip">
           <span class="containerBill-bill__label titulo-tip">Select Tip %</span>
           <div class="containerTip--btns">
-            <button class="containerTip--btns-btn">5%</button>
-            <button class="containerTip--btns-btn">10%</button>
-            <button class="containerTip--btns-btn">15%</button>
-            <button class="containerTip--btns-btn">25%</button>
-            <button class="containerTip--btns-btn">50%</button>
+            <button class="containerTip--btns-btn" value="5">5%</button>
+            <button class="containerTip--btns-btn" value="10">10%</button>
+            <button class="containerTip--btns-btn" value="15">15%</button>
+            <button class="containerTip--btns-btn" value="25">25%</button>
+            <button class="containerTip--btns-btn" value="50">50%</button>
             <input
               class="containerTip--btns-btn btn-custom"
               type="number"
@@ -68,15 +74,20 @@
           </div>
         </div>
         <div>
-          <label for="people" class="containerBill-bill__label"
-            >Number of People</label
-          >
-          <input
-            class="containerBill-bill__input input-person"
-            type="number"
-            placeholder="0"
-            id="people"
-          />
+          <div class="containerPeople">
+            <label for="people" class="containerBill-bill__label"
+              >Number of People</label
+            >
+            <span class="zeroPeople">Can't be zero</span>
+          </div>
+          <div>
+            <input
+              class="containerBill-bill__input input-person"
+              type="number"
+              placeholder="0"
+              id="people"
+            />
+          </div>
         </div>
       </section>
 
@@ -91,7 +102,7 @@
                 <span class="person">/ person</span>
               </div>
               <div>
-                <span class="total">$0.00</span>
+                <span id="tipPerson" class="total">$0.00</span>
               </div>
             </div>
             <div class="containerAmount--container--div">
@@ -102,12 +113,12 @@
                 <span class="person">/ person</span>
               </div>
               <div>
-                <span class="total">$0.00</span>
+                <span id="totalPerson" class="total">$0.00</span>
               </div>
             </div>
           </div>
           <div class="containerAmount--container--div">
-            <button class="btn-reset" type="reset">Reset</button>
+            <button class="btn-reset" type="button" disabled>Reset</button>
           </div>
         </div>
       </section>
@@ -119,5 +130,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Rubén</a>.
     </footer>
+
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

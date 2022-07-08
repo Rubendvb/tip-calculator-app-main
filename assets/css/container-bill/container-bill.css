@@ -10,6 +10,12 @@
   margin-bottom: 2rem;
 }
 
+.containerBill__zero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .containerBill-bill__label {
   font-size: 1rem;
   text-align: left;
@@ -38,8 +44,33 @@
 }
 
 .containerBill-bill__input::placeholder {
-  color: var(--ciano-cinza);
   font-family: var(--font-family);
+  color: var(--ciano-cinza);
+}
+
+.input-person {
+  background-image: url("/assets/images/icon-person.svg");
+  margin-top: 0.5rem;
+}
+
+.input-person-invalid {
+  outline: 2px solid rgb(230, 96, 96);
+}
+
+.containerPeople {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zeroBill,
+.zeroPeople {
+  display: none;
+  color: rgb(230, 96, 96);
+}
+
+.active {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {

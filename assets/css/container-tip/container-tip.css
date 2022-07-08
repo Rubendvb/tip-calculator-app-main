@@ -36,7 +36,7 @@
 
 .btn-custom {
   background-color: var(--ciano-muito-claro);
-  text-align: right;
+  text-align: center;
   padding: 0 1.875rem;
   color: var(--ciano-preto-escuro);
 }
@@ -46,11 +46,6 @@
   background-color: var(--ciano-muito-claro);
   color: var(--ciano-preto-escuro);
   outline: 2px solid var(--ciano-cinza-claro);
-}
-
-.input-person {
-  background-image: url("/assets/images/icon-person.svg");
-  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
