@@ -8,6 +8,23 @@ const btnReset = document.querySelector(".btn-reset");
 let zeroBill = document.querySelector(".zeroBill");
 let zeroPeople = document.querySelector(".zeroPeople");
 
+function formatarValor(valor) {
+  console.log(valor);
+
+  valor = valor.replace(/[,.]/g, "");
+
+  if (valor.length > 2) {
+    valor = valor.replace(/([0-9]{2})$/g, ".$1");
+  }
+
+  // if (valor.length > 6) {
+  //   valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+  // }
+
+  console.log(valor);
+  inputBill.value = valor;
+}
+
 function calcTip(percentage) {
   let bill = parseFloat(inputBill.value);
   let people = parseFloat(inputPeople.value);
@@ -84,6 +101,7 @@ function startingFunctions() {
   inputBill.addEventListener("keyup", () => {
     stateHandle();
     validaInputZerado();
+    formatarValor(inputBill.value);
   });
 
   btns.forEach((btn) => {

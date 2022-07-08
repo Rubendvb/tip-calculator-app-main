@@ -37,6 +37,7 @@
   background-image: url("/assets/images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: 1rem center;
+  font-family: var(--font-family);
 }
 
 .containerBill-bill__input:focus {
