@@ -9,8 +9,6 @@ let zeroBill = document.querySelector(".zeroBill");
 let zeroPeople = document.querySelector(".zeroPeople");
 
 function formatarValor(valor) {
-  console.log(typeof valor);
-
   valor = valor.replace(/[,.]/g, "");
 
   if (valor.length > 2) {
@@ -29,22 +27,26 @@ function calcTip(percentage) {
   let bill = parseFloat(inputBill.value);
   let people = parseFloat(inputPeople.value);
   percentage = parseInt(percentage);
+  let array = [];
   console.log(bill, percentage, people);
 
-  let array = [];
-
-  let tip = bill * (percentage / 100);
-  let tipPerPerson = tip / people;
-  let total = bill + tip;
-  let totalPerPerson = total / people;
-
-  if (isNaN(tipPerPerson) || isNaN(totalPerPerson)) {
+  if (isNaN(bill) || isNaN(people) || isNaN(percentage)) {
+    percentage = 0;
     return;
   } else {
-    array.push(tipPerPerson, totalPerPerson);
-  }
+    let tip = bill * (percentage / 100);
+    let tipPerPerson = tip / people;
+    let total = bill + tip;
+    let totalPerPerson = total / people;
 
-  showOnScreen(array);
+    if (isNaN(tipPerPerson) || isNaN(totalPerPerson)) {
+      return;
+    } else {
+      array.push(tipPerPerson, totalPerPerson);
+    }
+
+    showOnScreen(array);
+  }
 }
 
 function showOnScreen(values) {
@@ -84,10 +86,12 @@ function validaInputZerado() {
   }
 }
 
-function stateHandle() {
+function stateHandle(valueBtn) {
   btnReset.disabled = true;
 
-  if (inputPeople.value > 0 && inputBill.value > 0) {
+  console.log(valueBtn);
+
+  if (inputPeople.value > 0 && inputBill.value > 0 && valueBtn != undefined) {
     btnReset.disabled = false;
   }
 }
@@ -110,8 +114,9 @@ function startingFunctions() {
         calcTip(btn.value);
       });
     }
+
     btn.addEventListener("click", () => {
-      // inputCustom.value = "";
+      stateHandle(btn.value);
 
       if (btn != inputCustom) {
         inputCustom.value = "";
@@ -119,14 +124,6 @@ function startingFunctions() {
 
       validaInputZerado();
       calcTip(btn.value);
-
-      inputPeople.addEventListener("keyup", () => {
-        calcTip(btn.value);
-      });
-
-      inputBill.addEventListener("keyup", () => {
-        calcTip(btn.value);
-      });
     });
   });
 
